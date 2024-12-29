@@ -12,16 +12,16 @@ edit_uri: edit/main/docs/
 # Site navigation, contains all the pages users can view
 nav:
   - Home:
-      - Introduction: pages/index.md
+      - Introduction: index.md
 
   - Tenants:
-      - Tenant Guide: pages/tenants/index.md
+      - Tenant Guide: tenants/index.md
       - Cluster Resources:
-        - Nodes: pages/tenants/nodes.md
-        - Storage Classes: pages/tenants/storage-classes.md
-        - Priority Classes: pages/tenants/priority-classes.md
-        - Sealed Secrets: pages/tenants/sealed-secrets.md
-        - Minecraft Router: pages/tenants/minecraft-router.md
+        - Nodes: tenants/nodes.md
+        - Storage Classes: tenants/storage-classes.md
+        - Priority Classes: tenants/priority-classes.md
+        - Sealed Secrets: tenants/sealed-secrets.md
+        - Minecraft Router: tenants/minecraft-router.md
 
 # Plugins and extensions used
 plugins:
