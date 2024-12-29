@@ -1,0 +1,192 @@
+site_name: Constellation Documentation
+site_url: https://constellation-net.github.io/documentation
+site_author: Jack Gledhill
+site_description: >-
+  Handbook and documentation for my Kubernetes homelab, Constellation. 
+
+# Repository information, shown in right side of navbar
+repo_url: https://github.com/constellation-net/documentation
+repo_name: constellation-net/documentation
+edit_uri: edit/main/docs/
+
+# Site navigation, contains all the pages users can view
+nav:
+  - Home:
+      - Introduction: pages/index.md
+
+  - Tenants:
+      - Tenant Guide: pages/tenants/index.md
+      - Cluster Resources:
+        - Nodes: pages/tenants/nodes.md
+        - Storage Classes: pages/tenants/storage-classes.md
+        - Priority Classes: pages/tenants/priority-classes.md
+        - Sealed Secrets: pages/tenants/sealed-secrets.md
+        - Minecraft Router: pages/tenants/minecraft-router.md
+
+# Plugins and extensions used
+plugins:
+  - search # Site search
+  # Git metadata
+  - git-authors
+  - git-committers:
+      repository: constellation-net/documentation
+      branch: main
+  - git-revision-date-localized:
+      type: date
+      enable_creation_date: true
+      fallback_to_build_date: true
+  # External resources are downloaded during build
+  - privacy
+  # RSS feed for blog posts
+  - rss:
+      match_path: blog/posts/.*
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
+  - blog:
+      blog_dir: blog
+  - privacy # External assets are downloaded at build time
+
+# Extensions for markdown on pages
+markdown_extensions:
+  - footnotes
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+  - pymdownx.blocks.caption
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.snippets:
+      auto_append:
+        - includes/glossary.md
+  - abbr
+
+# Additional JavaScript
+extra_javascript:
+  # Used for Mathjax plugin
+  - assets/js/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+theme:
+  name: material
+  favicon: assets/favicon.png
+  custom_dir: overrides
+
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - content.action.edit
+    - content.action.view
+    - content.tooltips
+    - search.suggest
+    - search.highlight
+    - search.share
+    - tags
+    - announce.dismiss
+
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: teal
+      accent: teal
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      primary: teal
+      accent: teal
+
+  # Updating the icons used for certain actions
+  icon:
+    edit: material/pencil
+    view: material/eye
+    repo: fontawesome/brands/github
+    annotation: material/information
+    logo: material/star-four-points-circle-outline
+
+extra:
+  # Site analytics & page feedback
+  analytics:
+    provider: google
+    property: G-ZGE895CJE3
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/thumb-up-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/thumb-down-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by
+            submitting an issue on the <a href="https://github.com/constellation-net/documentation/issues/new" target="_blank" rel="noopener">GitHub repo</a>
+
+  # Social media links on footer
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/constellation-net
+
+  consent:
+    title: Cookies
+    actions:
+      - accept
+      - reject
+      - manage
+    description: >-
+      This website uses cookies to anonymously track visits and interactions to this site, as well as feedback users give on each of the pages here so we know which pages need improvement. <b>This site does not track personal or identifiable information, ever.</b>
+
+# Copyright notice, shown in footer
+copyright: >
+  Copyright &copy; 2024 Jack Gledhill <br />
+  <a href="#__consent"><u>Manage cookies</u></a>
