@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://constellation-net.github.io/documentation/</loc>
+         <lastmod>2024-12-29</lastmod>
+    </url>
+    <url>
+         <loc>https://constellation-net.github.io/documentation/blog/</loc>
+         <lastmod>2024-12-29</lastmod>
+    </url>
+    <url>
+         <loc>https://constellation-net.github.io/documentation/tenants/</loc>
+         <lastmod>2024-12-29</lastmod>
+    </url>
+    <url>
+         <loc>https://constellation-net.github.io/documentation/tenants/minecraft-router/</loc>
+         <lastmod>2024-12-29</lastmod>
+    </url>
+    <url>
+         <loc>https://constellation-net.github.io/documentation/tenants/nodes/</loc>
+         <lastmod>2024-12-29</lastmod>
+    </url>
+    <url>
+         <loc>https://constellation-net.github.io/documentation/tenants/priority-classes/</loc>
+         <lastmod>2024-12-29</lastmod>
+    </url>
+    <url>
+         <loc>https://constellation-net.github.io/documentation/tenants/sealed-secrets/</loc>
+         <lastmod>2024-12-29</lastmod>
+    </url>
+    <url>
+         <loc>https://constellation-net.github.io/documentation/tenants/storage-classes/</loc>
+         <lastmod>2024-12-29</lastmod>
+    </url>
+</urlset>
